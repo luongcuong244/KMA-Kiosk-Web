@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "KMA Web"
+rootProject.name = "KMA Kiosk Web"
 include(":app")
  

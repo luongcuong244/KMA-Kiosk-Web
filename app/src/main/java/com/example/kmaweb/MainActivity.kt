@@ -1,6 +1,7 @@
 package com.example.kmaweb
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.net.Uri
@@ -35,6 +36,12 @@ class MainActivity : AppCompatActivity() {
         btnReload.setOnClickListener {
             loadUrl()
         }
+    }
+
+    override fun onNewIntent(intent: Intent) {
+        super.onNewIntent(intent)
+        Log.d("MainActivity", "onNewIntent called")
+        loadUrl()
     }
 
     private fun initWebView() {
